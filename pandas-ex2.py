@@ -10,10 +10,10 @@ data = {
 df = pd.DataFrame(data)
 
 print(df)
+print(df.head()) # Display the first 5 rows of the DataFrame
+print(df.tail()) # Display the last 5 rows of the DataFrame
 
-print("=========")
+print(df.isnull().sum()) # Check for missing values in each column
+print(df.info())  # Display a concise summary of the DataFrame
 
-print(df.isnull().sum())
-print("=========")
-
-print(df.loc[0, ["name", "salary"]])
+print(df.loc[0, ["name", "salary"]])  # Access the "name" and "salary" columns for the first row

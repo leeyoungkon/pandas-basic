@@ -10,6 +10,6 @@ data = {
 
 df = pd.DataFrame(data)
 
-#print(df)
+print(df)
 
 print(df.dropna())
