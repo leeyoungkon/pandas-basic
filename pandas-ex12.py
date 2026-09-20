@@ -7,7 +7,9 @@ sales = pd.DataFrame({
 })
 
 #sales = sales.sort_values(by='amount')
+#print(sales)
 #sales = sales.groupby('region', as_index=False).agg(total_amount=('amount', 'sum'))
+#print(sales)
 #result = sales.groupby('region', as_index=False)['amount'].mean().rename(columns={'amount': 'avg_amount'})
 #result = sales.groupby('region', as_index=False).agg(
 #    avg_amount=('amount', 'mean'),
@@ -15,6 +17,7 @@ sales = pd.DataFrame({
 #    max_amount=('amount', 'max'),
 #    min_amount=('amount', 'min')
 #)
+
 result = sales.groupby('region', as_index=False).agg(
     avg_amount=('amount', 'mean')).sort_values(by='avg_amount', ascending=False)
 

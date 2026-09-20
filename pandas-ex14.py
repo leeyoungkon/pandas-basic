@@ -48,7 +48,7 @@ result2 = pd.concat(
     ignore_index=True
 )
 
-#print(result2)
+print(result2)
 df3 = pd.DataFrame({
     'name': ['Kim', 'Lee', 'Park']
 })
